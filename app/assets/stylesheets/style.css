@@ -1,0 +1,32 @@
+/*
+Theme Name: MAXBLOG
+Theme URI: http://maxblog1.tn-simple.com
+Author: TN Team.
+Author URI: http://themeruby.com
+Description: MaxBlog - Flat News Magazine Blogs WP.
+Version: 3.1
+License: license purchased
+License URI: http://themeforest.net/licenses/regular_extended
+Tags: white, one-column, two-columns, right-sidebar, fluid-layout, custom-colors, custom-menu, featured-images, post-formats, theme-options, translation-ready
+Text Domain: tn
+*/
+
+.gallery-image-comment.photo-name, .gallery-image-author, .tags-block, .author.fl, .views-counter.fr, .clearfix.mrgnleft30, .mgs_marb_20, .post-content-wrap h1, span.data, .topic_label, .sourcedatelink_box {
+  display: none;
+}
+
+.col-sm-8 {
+  width: 100%;
+}
+#menu-main > ul > li > a {
+  padding: 0 19px !important;
+  display: block;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  cursor: pointer;
+  line-height: 48px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+}
