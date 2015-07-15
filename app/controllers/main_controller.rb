@@ -1,10 +1,8 @@
 class MainController < ApplicationController
   def index
-    @last_news = []
-    @articles = Article.all
-    @images = ArticleImage.all
-    @big_last_news_images = ArticleImage.all.limit(3)
-    @small_last_news_images = ArticleImage.all.limit(3)
+    @not_image = 'http://paltelegraph.com/wp-content/uploads/2014/05/img_not_found.jpg'
+    @carusel = Category.politics.first.articles.limit(4)
+    @last_news = Category.politics.first.articles.limit(6)
 
   end
 end

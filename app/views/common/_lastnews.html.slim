@@ -11,15 +11,15 @@
   .module3-wrap
     .row-fluid.clearfix
       / row fluid
-    - @big_last_news_images.each do | big_img |
+    - @last_news.each do | article |
       .col-sm-4.col-xs-12
         .block4-wrap.tn-block-wrap.tn-category-24.clearfix itemscope="" itemtype="http://schema.org/Article"
           meta content="admin" itemprop="author"
             .thumb-wrap
-              a href="#" rel="bookmark" title=Article.find( big_img ).article_title
+              a href="#" rel="bookmark" title=article.article_title
                 span.post-format
                   i.fa.fa-file-text
-                img.attachment-module_medium_thumb.wp-post-image alt="dde5beb2a851fe73244d1697187641a4" height="165" itemprop="image" src=big_img.image_url width="220" /
+                img.attachment-module_medium_thumb.wp-post-image alt="dde5beb2a851fe73244d1697187641a4" height="165" itemprop="image" src="#{article.article_image.any? ? article.article_image.first.image_url : @not_image}" width="220"
               .meta-thumb-wrap
                 .meta-thumb-element.meta-thumb-views
                   i.fa.fa-share
@@ -39,7 +39,7 @@
                 .block4-left-meta-tag
                   ul.post-categories
                     li
-                      a href="http://moscow.today/category/ekonomika/" title="Экономика"  Экономика
+                      a href="#" title="Экономика"  Экономика
                   ul.post-meta
                     li.date-post-meta
                       span /
@@ -49,21 +49,20 @@
                   ul.post-meta
                     li.comment-post-meta
                       span /
-                      a href=Article.find( big_img ).article_title  No Comment
+                      a href=article.article_title  No Comment
                   meta content="UserComments:0" itemprop="interactionCount" /
               h3.block-title itemprop="name"
-                a href='#' itemprop="url" title= Article.find( big_img ).article_title = Article.find( big_img ).article_title
-    end
+                a href='#' itemprop="url" title= "#{ article.article_title }" = "#{article.article_title}"
+
     .row-fluid.clearfix
-      - @small_last_news_images.each do | small_img |
         .col-sm-4.col-xs-12
           .block6-wrap.tn-block-wrap.tn-category-22.clearfix itemscope="" itemtype="http://schema.org/Article"
             meta content="admin" itemprop="author"
               .thumb-wrap
-                a href="#" rel="bookmark" title=Article.find( small_img ).article_title
+                a href="#" rel="bookmark" title='article.article_title'
                   span.post-format
                     i.fa.fa-file-text
-                  img.attachment-module_medium_thumb.wp-post-image alt="dde5beb2a851fe73244d1697187641a4" height="165" itemprop="image" src=small_img.image_url width="220" /
+                  img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src='article.article_image.first.image_url' width="220" /
                 .shares-to-social-thumb-wrap.share-invisible
                   .shares-to-social-thumb-inner
                     a.share-to-social href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
@@ -75,7 +74,7 @@
               /! #thumb wrap
               .block6-content
                 h3.block-title itemprop="name"
-                  a href='#' itemprop="url" title=Article.find( small_img ).article_title = Article.find( small_img ).article_title
+                  a href='#' itemprop="url" title='article.article_title'
                 .block6-meta
                     ul.post-categories
                       li
@@ -85,4 +84,4 @@
                         span /
                         time datetime="2015-07-12T17:43:58+00:00" itemprop="dateCreated"  12.07.2015
                       meta content="UserComments:0" itemprop="interactionCount" /
-      end
+    end
