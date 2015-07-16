@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  get 'category/show'
-
   root 'main#index'
-
+  get 'category/show'
   get 'article/show'
 
 

@@ -11,58 +11,20 @@
   .module3-wrap
     .row-fluid.clearfix
       / row fluid
-    - @last_news.each do | article |
-      .col-sm-4.col-xs-12
-        .block4-wrap.tn-block-wrap.tn-category-24.clearfix itemscope="" itemtype="http://schema.org/Article"
-          meta content="admin" itemprop="author"
-            .thumb-wrap
-              a href="#" rel="bookmark" title=article.article_title
-                span.post-format
-                  i.fa.fa-file-text
-                img.attachment-module_medium_thumb.wp-post-image alt="dde5beb2a851fe73244d1697187641a4" height="165" itemprop="image" src="#{article.article_image.any? ? article.article_image.first.image_url : @not_image}" width="220"
-              .meta-thumb-wrap
-                .meta-thumb-element.meta-thumb-views
-                  i.fa.fa-share
-                  span 0 view
-              /! # meta thumb wrap
-              .shares-to-social-thumb-wrap.share-invisible
-                .shares-to-social-thumb-inner
-                  a.share-to-social href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
-                    i.fa.fa-facebook.color-facebook
-                  a.share-to-social href="https://twitter.com/intent/tweet?text=%D0%9D%D0%B5+%D0%B1%D1%8B%D0%BB%D0%BE+%D0%BD%D0%B8%D0%BA%D0%B0%D0%BA%D0%BE%D0%B3%D0%BE+%D1%81%D0%B5%D0%BB%D1%84%D0%B8%3A+%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%8B%D0%B5+%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B8%2C+%D0%BF%D0%BE%D0%B3%D0%B8%D0%B1%D1%88%D0%B5%D0%B9+%D0%B2+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%B5+%D0%A1%D0%B8%D1%82%D0%B8%2C+%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D1%82%D1%80%D0%B0%D0%B3%D0%B5%D0%B4%D0%B8%D0%B8&amp;url=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F&amp;via=moscow.today" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
-                    i.fa.fa-twitter.color-twitter
-                  a.share-to-social href="http://plus.google.com/share?url=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
-                    i.fa.fa-google-plus.color-google
-            /! #thumb wrap
-            .block4-content
-              .block4-meta-tag
-                .block4-left-meta-tag
-                  ul.post-categories
-                    li
-                      a href="#" title="Экономика"  Экономика
-                  ul.post-meta
-                    li.date-post-meta
-                      span /
-                      time datetime="2015-07-12T17:43:58+00:00" itemprop="dateCreated"  12.07.2015
-                  meta content="UserComments:0" itemprop="interactionCount" /
-                .block4-right-meta-tag
-                  ul.post-meta
-                    li.comment-post-meta
-                      span /
-                      a href=article.article_title  No Comment
-                  meta content="UserComments:0" itemprop="interactionCount" /
-              h3.block-title itemprop="name"
-                a href='#' itemprop="url" title= "#{ article.article_title }" = "#{article.article_title}"
-
-    .row-fluid.clearfix
+      - @last_news.each do | article |
         .col-sm-4.col-xs-12
-          .block6-wrap.tn-block-wrap.tn-category-22.clearfix itemscope="" itemtype="http://schema.org/Article"
+          .block4-wrap.tn-block-wrap.tn-category-24.clearfix itemscope="" itemtype="http://schema.org/Article"
             meta content="admin" itemprop="author"
               .thumb-wrap
-                a href="#" rel="bookmark" title='article.article_title'
+                a href="#" rel="bookmark" title=article.article_title
                   span.post-format
                     i.fa.fa-file-text
-                  img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src='article.article_image.first.image_url' width="220" /
+                  img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src="#{article.article_image.any? ? article.article_image.first.image_url : @not_image}" width="220"
+                .meta-thumb-wrap
+                  .meta-thumb-element.meta-thumb-views
+                    i.fa.fa-share
+                    span 0 view
+                /! # meta thumb wrap
                 .shares-to-social-thumb-wrap.share-invisible
                   .shares-to-social-thumb-inner
                     a.share-to-social href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
@@ -72,16 +34,45 @@
                     a.share-to-social href="http://plus.google.com/share?url=http%3A%2F%2Fmoscow.today%2Fne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
                       i.fa.fa-google-plus.color-google
               /! #thumb wrap
-              .block6-content
-                h3.block-title itemprop="name"
-                  a href='#' itemprop="url" title='article.article_title'
-                .block6-meta
+              .block4-content
+                .block4-meta-tag
+                  .block4-left-meta-tag
                     ul.post-categories
                       li
-                        a href="http://moscow.today/category/ekonomika/" title="Экономика"  Экономика
+                        a href="#" title="" = Category.all.sample.page_title
                     ul.post-meta
                       li.date-post-meta
                         span /
                         time datetime="2015-07-12T17:43:58+00:00" itemprop="dateCreated"  12.07.2015
-                      meta content="UserComments:0" itemprop="interactionCount" /
-    end
+                    meta content="UserComments:0" itemprop="interactionCount" /
+                  .block4-right-meta-tag
+                    ul.post-meta
+                      li.comment-post-meta
+                        span /
+                        a href=article.article_title  No Comment
+                    meta content="UserComments:0" itemprop="interactionCount" /
+                h3.block-title itemprop="name"
+                  a href='#' itemprop="url" title= "#{ article.article_title }" = "#{article.article_title}"
+      end
+    .row-fluid.clearfix
+      - @last_news_small.each do | article |
+        .col-sm-4.col-xs-12
+          .block6-wrap.tn-block-wrap.tn-category-33.clearfix itemscope="" itemtype="http://schema.org/Article"
+            meta content="admin" itemprop="author"
+            .thumb-wrap
+              a href="#" rel="bookmark" title='article.article_title'
+                img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src="#{article.article_image.any? ? article.article_image.first.image_url : @not_image}" width="220"
+            /! #thumb wrap
+            .block6-content
+              h3.block-title itemprop="name"
+                a href='#' itemprop="url" title='article.article_title' = article.article_title
+              .block6-meta
+                ul.post-categories
+                  li
+                    a href="#" title="" = Category.all.sample.page_title
+                ul.post-meta
+                  li.date-post-meta
+                    span /
+                    time datetime="2015-07-12T17:43:58+00:00" itemprop="dateCreated"  12.07.2015
+                  meta content="UserComments:0" itemprop="interactionCount" /
+      end
