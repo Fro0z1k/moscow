@@ -11,6 +11,21 @@
 // about supported directives.
 //
 //= require jquery
+//= require add-to-cart.min
+//= require cart-fragments.min
+//= require comment-reply.min
+//= require extend-lib
+//= require jquery-migrate.min
+//= require jquery.blockUI.min
+//= require jquery.cookie.min
+//= require jquery.form.min
+//= require main
+//= require module-ajax
+//= require retina.min
+//= require scripts
+//= require tn-script.min
+//= require webfont
+//= require woocommerce.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
