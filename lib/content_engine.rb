@@ -7,13 +7,14 @@ module ContentEngine
       get_all_articles
     end
 
+
     def get_all_articles
-    	scraper_names = %w|kp moskva_bezformata mk interfax tass vm rosbalt mailru newsmsk rg|
+    	scraper_names = %w|kp moskva_bezformata mk interfax tass vm rosbalt newsmsk rg|
     	scraper_names.each do | n | get_articles n end
     end
 
 		def get_articles( scraper_name )
-			scraper = Scrapers.const_get( scraper_name.camelize )
+      scraper = Scrapers.const_get( scraper_name.camelize )
 			article_source = ArticleSource.where( name: scraper_name ).first || ArticleSource.new( name: scraper_name )
 			article_source.save! if article_source.new_record?
 			article_links = scraper.get_article_links

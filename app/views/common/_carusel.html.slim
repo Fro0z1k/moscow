@@ -9,7 +9,7 @@
                 .thumb-wrap
                   .thumb-overlay
                   a href="#{ article.article_title }"
-                    img.attachment-module_5_thumb.wp-post-image alt="" draggable="false" height="165" itemprop="image" src= "#{article.article_image.any? ? article.article_image.first.image_url : @not_image}" width="220"
+                    img.attachment-module_5_thumb.wp-post-image alt="" draggable="false" height="165" itemprop="image" src= "#{article.article_images.any? ? article.article_images.first.image_url : @not_image}" width="220"
                   .shares-to-social-thumb-wrap.share-invisible
                     .shares-to-social-thumb-inner
                       a.share-to-social href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmoscow.today%2Fv-ponedelnik-budet-plyus-20-gradusov-10%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
