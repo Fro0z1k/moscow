@@ -1,23 +1,10 @@
 module ContentEngine
   class << self
 
-    def work
-      parse_articles
-      parse_vk
-      sort_articles
-      publish_articles
-    end
-
-    def parse_articles
-    end
-
-    def parse_vk
-    end
-
-    def sort_articles
-    end
-
-    def publish_articles
+    def start
+      Article.delete_all
+      puts '!!! >>>> ARTICLES DELETE <<<< !!!'
+      get_all_articles
     end
 
     def get_all_articles
@@ -39,7 +26,20 @@ module ContentEngine
 				end
 				article.save!
 			end
+      delete_all_category_articles
 		end
+
+    def delete_all_category_articles
+      Category.all.map.each { | category | category.articles.delete_all }
+      add_category_articles
+    end
+
+    def add_category_articles
+      Category.all.map do | category |
+        article = Article.all.sample
+        category.articles << article.article_source.articles
+      end
+    end
 
   end
 end
