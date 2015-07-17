@@ -25,7 +25,7 @@ module ContentEngine
 				( article_data[:images] || [] ).each do | image_link |
 					image = article.article_images.build( image_url: image_link )
 				end
-				article.save!
+				article.save if article.article_images.any?
 			end
       delete_all_category_articles
 		end

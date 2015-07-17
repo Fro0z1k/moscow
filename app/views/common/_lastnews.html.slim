@@ -19,7 +19,7 @@
                 a href="#" rel="bookmark" title=article.article_title
                   span.post-format
                     i.fa.fa-file-text
-                  img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src="#{article.article_images.any? ? article.article_images.first.image_url : @not_image}" width="220"
+                  img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src=article.article_images.first.image_url width="220"
                 .meta-thumb-wrap
                   .meta-thumb-element.meta-thumb-views
                     i.fa.fa-share
@@ -61,7 +61,7 @@
             meta content="admin" itemprop="author"
             .thumb-wrap
               a href="#" rel="bookmark" title='article.article_title'
-                img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src="#{article.article_images.any? ? article.article_images.first.image_url : @not_image}" width="220"
+                img.attachment-module_medium_thumb.wp-post-image alt="" height="165" itemprop="image" src=article.article_images.first.image_url width="220"
             /! #thumb wrap
             .block6-content
               h3.block-title itemprop="name"

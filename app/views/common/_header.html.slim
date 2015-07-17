@@ -93,32 +93,10 @@ header.clearfix
       .module-ticker-wrap.clearfix
         .module-ticker-inner
           ul#tn-ticker-bar.js-hidden.module-sticker-inner
-            li.block-ticker-wrap.tn-category-24 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-23/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-39 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-22/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-23 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-21/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-29 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-20/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-38 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-19/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-26 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author"
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-18/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-            li.block-ticker-wrap.tn-category-26 itemscope="" itemtype="http://schema.org/Article"
-              meta content="admin" itemprop="author" /
-              h3.block-title itemprop="name"
-                a href="http://moscow.today/ne-bylo-nikakogo-selfi-znakomye-devushki-pogibshej-v-rajone-siti-rasskazali-podrobnosti-tragedii-17/" itemprop="url" title="Не было никакого селфи: знакомые девушки), погибшей в районе Сити, рассказали подробности трагедии"  Не было никакого селфи: знакомые девушки, погибшей в районе Сити, рассказали подробности трагедии
-    /! #module ticker
+            - @header.each do | article |
+              li.block-ticker-wrap.tn-category-24 itemscope="" itemtype="http://schema.org/Article"
+                meta content="admin" itemprop="author"
+                h3.block-title itemprop="name"
+                  a href="#" itemprop="url" title="article.article_title"  =article.article_title
+            end
+            /! #module ticker
