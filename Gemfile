@@ -21,6 +21,8 @@ gem 'cloudinary'
 
 gem 'clockwork'
 
+gem 'rails_12factor'
+
 # parse
 gem 'nokogiri'
 gem 'mechanize', '2.7.2'
