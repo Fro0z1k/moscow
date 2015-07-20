@@ -8,6 +8,7 @@ class MainController < ApplicationController
     @popular_news = 3.times.map { | article | Category.last.articles.sample }
     @popular_small_news = 3.times.map { | article | Category.first.articles.sample }
     @popular_small_news_2 = 3.times.map { | article | Category.first.articles.sample }
+    @bottom = Category.first.articles.limit( 6 )
 
     @economy =                  Category.find_by( title: 'economy' )
     @urban_infrastructure =     Category.find_by( title: 'urban_infrastructure' )
