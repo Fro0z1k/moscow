@@ -1,11 +1,19 @@
-.row.container-fluid
-  #full-top.row.clearfix
-    .col-xs-12
-      #tn-carousel-4.widget.module-carousel-widget
-        = render 'common/carusel'
-        / #module carousel
-      #module3-widget-2.widget.module3-widget
-        = render 'common/lastnews'
-      #module3-widget-3.widget.module3-widget
-        = render 'common/popular'
-  / #top
+body.home.page.page-id-2.page-template.page-template-homepage.page-template-homepage-php.tn-body-class
+  .tn-main-page-wrap
+    #main-mobile-menu class="menu-%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-container"
+      = render 'common/topbody'
+    .tn-main-container
+      = render 'common/header'
+      / header
+      #main-wrapper.tn-container
+        .row.container-fluid
+          = render 'common/index'
+          / #yield
+
+    footer#footer.clearfix.visible
+      = render 'common/footer'
+      /! #footer
+    /! #tn main container
+  /! #main page wrap
+  = render 'common/java'
+/! #body

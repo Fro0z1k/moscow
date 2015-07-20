@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'main#index'
-  get 'category/show'
+  get 'category/:title', to: 'category#show', as: 'category'
   get 'article/show'
 
 

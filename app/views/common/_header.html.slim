@@ -5,7 +5,7 @@ header.clearfix
         .logo-content-wrap
           .logo-no-image
             h1.title-logo
-              a href="/" itemprop="url"  moscow.today
+              a href="/" itemprop="url" moscow.today
             h3.title-tagline Новости Москвы
           /! #no image
           meta content="moscow.today" itemprop="name"
@@ -24,71 +24,71 @@ header.clearfix
             #menu-main class="menu-%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-container"
               ul.menu id="menu-%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e"
                 li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6568.tn-menu-category-24
-                  a href="http://moscow.today/category/ekonomika/"  Экономика
+                  = link_to @economy.page_title, category_path( title: "#{@economy.title}" )
                   .tn-dropdown-menu
                     .tn-sub-menu-wrap
                       ul.tn-sub-menu.clearfix
                         li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7409.tn-menu-category-31
-                          a href="http://moscow.today/category/gorodskaya-infrastruktura/"  Городская инфраструктура
+                          = link_to @urban_infrastructure.page_title, category_path( title: "#{ @urban_infrastructure.title }" )
                         li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7360.tn-menu-category-30
-                          a href="http://moscow.today/category/arxitektura/"  Архитектура
+                          = link_to @architecture.page_title, category_path( title: "#{ @architecture.title }" )
                         li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7776.tn-menu-category-34
-                          a href="http://moscow.today/category/kommunalnoe-xozyajstvo/"  Коммунальное хозяйство
+                          = link_to @public_service.page_title, category_path( title: "#{ @public_service.title }" )
                         li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7905.tn-menu-category-38
-                          a href="http://moscow.today/category/nedvizhimost/"  Недвижимость
+                          = link_to @realty.page_title, category_path( title: "#{ @realty.title }" )
                         li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7930.tn-menu-category-39
-                          a href="http://moscow.today/category/oblastnaya-infrastruktura/"  Областная инфраструктура
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8403.tn-menu-category-43
-                  a href="http://moscow.today/category/tarify/"  Тарифы
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6563.tn-menu-category-22
-                  a href="http://moscow.today/category/obshhestvo/"  Общество
-                  .tn-dropdown-menu
-                    .tn-sub-menu-wrap
-                      ul.tn-sub-menu.clearfix
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7528.tn-menu-category-32
-                          a href="http://moscow.today/category/deti/"  Дети
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7663.tn-menu-category-33
-                          a href="http://moscow.today/category/zhivotnye/"  Животные
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8166.tn-menu-category-41
-                          a href="http://moscow.today/category/prazdniki/"  Праздники
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8295.tn-menu-category-42
-                          a href="http://moscow.today/category/razvlecheniya/"  Развлечения
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6565.tn-menu-category-25
-                  a href="http://moscow.today/category/proisshestviya/"  Происшествия
-                  .tn-dropdown-menu
-                    .tn-sub-menu-wrap
-                      ul.tn-sub-menu.clearfix
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7811.tn-menu-category-35
-                          a href="http://moscow.today/category/kriminal/"  Криминал
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7880.tn-menu-category-37
-                          a href="http://moscow.today/category/migranty/"  Мигранты
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6561.tn-menu-category-28
-                  a href="http://moscow.today/category/pogoda/"  Погода
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6567.tn-menu-category-29
-                  a href="http://moscow.today/category/transport/"  Транспорт
-                  .tn-dropdown-menu
-                    .tn-sub-menu-wrap
-                      ul.tn-sub-menu.clearfix
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7852.tn-menu-category-36
-                          a href="http://moscow.today/category/metropoliten/"  Метрополитен
-                        li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8081.tn-menu-category-40
-                          a href="http://moscow.today/category/obshhestvennyj-transport/"  Общественный транспорт
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6562.tn-menu-category-26
-                  a href="http://moscow.today/category/kultura/"  Культура
-                li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6564.tn-menu-category-23
-                  a href="http://moscow.today/category/politika/"  Политика
-            .ajax-search-wrap
-              a#ajax-form-search.ajax-search-icon href="#"
-                i.fa.fa-search
-              form.ajax-form action="http://moscow.today/" method="get" role="search"
-                fieldset
-                  input#search-form-text.field autocomplete="off" name="s" placeholder="Поиск..." type="text" value=""
-                #ajax-search-result
-            /! #ajax search
-          /! #main nav inner
-        /! #tn container
-      /! #main nav wrap
-    /! # main nav
+                          = link_to @regional_infrastructure.page_title, category_path( title: "#{ @regional_infrastructure.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8403.tn-menu-category-43
+                    = link_to @tarifs.page_title, category_path( title: "#{ @tarifs.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6563.tn-menu-category-22
+                    = link_to @solution.page_title, category_path( title: "#{ @solution.title }" )
+                    .tn-dropdown-menu
+                      .tn-sub-menu-wrap
+                        ul.tn-sub-menu.clearfix
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7528.tn-menu-category-32
+                            = link_to @children.page_title, category_path( title: "#{ @children.title }" )
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7663.tn-menu-category-33
+                            = link_to @animals.page_title, category_path( title: "#{ @animals.title }" )
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8166.tn-menu-category-41
+                            = link_to @selebrates.page_title, category_path( title: "#{ @selebrates.title }" )
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8295.tn-menu-category-42
+                            = link_to @funs.page_title, category_path( title: "#{ @funs.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6565.tn-menu-category-25
+                    = link_to @accident.page_title, category_path( title: "#{ @accident.title }" )
+                    .tn-dropdown-menu
+                      .tn-sub-menu-wrap
+                        ul.tn-sub-menu.clearfix
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7811.tn-menu-category-35
+                            = link_to @criminal.page_title, category_path( title: "#{ @criminal.title }" )
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7880.tn-menu-category-37
+                            = link_to @migrants.page_title, category_path( title: "#{ @migrants.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6561.tn-menu-category-28
+                    = link_to @weather.page_title, category_path( title: "#{ @weather.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-has-children.menu-item-6567.tn-menu-category-29
+                    = link_to @transport.page_title, category_path( title: "#{ @transport.title }" )
+                    .tn-dropdown-menu
+                      .tn-sub-menu-wrap
+                        ul.tn-sub-menu.clearfix
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-7852.tn-menu-category-36
+                            = link_to @subway.page_title, category_path( title: "#{ @subway.title }" )
+                          li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-8081.tn-menu-category-40
+                            = link_to @social_transport.page_title, category_path( title: "#{ @social_transport.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6562.tn-menu-category-26
+                    = link_to @culture.page_title, category_path( title: "#{ @culture.title }" )
+                  li.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-6564.tn-menu-category-23
+                    = link_to @politics.page_title, category_path( title: "#{ @politics.title }" )
+              .ajax-search-wrap
+                a#ajax-form-search.ajax-search-icon href="#"
+                  i.fa.fa-search
+                form.ajax-form action="/" method="get" role="search"
+                  fieldset
+                    input#search-form-text.field autocomplete="off" name="s" placeholder="Поиск..." type="text" value=""
+                  #ajax-search-result
+              /! #ajax search
+            /! #main nav inner
+          /! #tn container
+        /! #main nav wrap
+      /! # main nav
     .tn-container
       .module-ticker-wrap.clearfix
         .module-ticker-inner

@@ -5,38 +5,16 @@ doctype html
   html class="no-js ie7 oldie" lang="en"
 /[if IE 8]
   html class="no-js ie8 oldie" lang="en"
-/ [if gt IE 8]
+/[if gt IE 8]
 
-html.no-js lang="ru-RU"
+html.wf-helveticaarialsansserif-n4-active.wf-roboto-n4-active.wf-roboto-n7-active.wf-active lang="ru-RU" style=("height: auto;")
   head
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = render 'common/head'
-  / #head
+  /! #head
 
-  body.home.page.page-id-2.page-template.page-template-homepage.page-template-homepage-php.tn-body-class
-    .tn-main-page-wrap
-      #main-mobile-menu class="menu-%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-container"
-        = render 'common/topbody'
-      .tn-main-container
-        = render 'common/header'
-        / header
-        #main-wrapper.tn-container
-          = yield
-          / #yield
-            #full-bottom.row.clearfix
-              = render 'common/bottom'
-            / #bottom
-        footer#footer.clearfix.visible
-          = render 'common/footer'
-        / #footer
-        / #tn container
-        .copyright-wrap
-          .tn-container
-          /! #tn-container
-        / #copyright wrap
-      / #tn main container
-    / #main page wrap
-    = render 'common/java'
-  / #body
-/ #html
+  = yield
+  /! #body
+
+/! #html

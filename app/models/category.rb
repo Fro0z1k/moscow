@@ -26,7 +26,26 @@ class Category < ActiveRecord::Base
   scope :politics,                -> { where( title: 'politics' ) }
 
   def self.header
-    where( title: %w( main news world russia social political business science sport ) )
+    where( title: %w( economy tarifs solution accident weather transport culture politics ) )
   end
 
+  # def self.economy
+  #   where( title: %w( urban_infrastructure architecture public_service realty regional_infrastructure ) )
+  # end
+
+  # def self.solution
+  #   where( title: %w( children animals selebrates funs ) )
+  # end
+
+  # def self.accident
+  #   where( title: %w( criminal migrants ) )
+  # end
+
+  # def self.transport
+  #   where( title: %w( subway social_transport ) )
+  # end
+
+  # def self.category_dropdown
+  #   [ Category.economy, Category.solution, Category.accident, Category.transport ]
+  # end
 end
