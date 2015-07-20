@@ -5,6 +5,9 @@ class MainController < ApplicationController
     @last_news = 3.times.map { | article | Category.first.articles.sample }
     @last_news_small = 3.times.map { | article | Category.first.articles.sample }
     @header = 6.times.map { | article | Category.first.articles.sample }
+    @popular_news = 3.times.map { | article | Category.last.articles.sample }
+    @popular_small_news = 3.times.map { | article | Category.first.articles.sample }
+    @popular_small_news_2 = 3.times.map { | article | Category.first.articles.sample }
 
     @economy =                  Category.find_by( title: 'economy' )
     @urban_infrastructure =     Category.find_by( title: 'urban_infrastructure' )
