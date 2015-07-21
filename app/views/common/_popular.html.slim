@@ -16,7 +16,7 @@
         .block4-wrap.tn-block-wrap.tn-category-32.clearfix itemscope="" itemtype="http://schema.org/Article"
           meta content="admin" itemprop="author" /
           .thumb-wrap
-            a href="#" rel="bookmark" title=article.article_title
+            a href="" rel="bookmark" title=article.article_title
               span.post-format
                 i.fa.fa-file-text
               img.attachment-module_medium_thumb.wp-post-image alt="b4d44f2c167b201085816ac5ae985413" height="165" itemprop="image" src=article.article_images.first.image_url width="220" /
@@ -39,7 +39,7 @@
               .block4-left-meta-tag
                 ul.post-categories
                   li
-                    a href="#" title="" = Category.all.sample.page_title
+                    a href="" title="" = Category.all.sample.page_title
                 ul.post-meta
                   li.date-post-meta
                     span /
@@ -52,7 +52,7 @@
                     a href="#"  No Comment
                 meta content="UserComments:0" itemprop="interactionCount" /
             h3.block-title itemprop="name"
-              a href="#" itemprop="url" title='article.article_title' =article.article_title
+              = link_to article.article_title, article_path( article_title: article.article_title )
     end
     /! #row fluid
     .row-fluid.clearfix
@@ -62,15 +62,15 @@
         .block6-wrap.tn-block-wrap.tn-category-30.clearfix itemscope="" itemtype="http://schema.org/Article"
           meta content="admin" itemprop="author" /
           .thumb-wrap
-            a href="#" rel="bookmark" title=article.article_title
+            a href="" rel="bookmark" title=article.article_title
               img.attachment-small_thumb.wp-post-image alt="8f4427cad060c3e999e00810c733ced1" height="63" itemprop="image" src=article.article_images.first.image_url width="90" /
           .block6-content
             h3.block-title itemprop="name"
-              a href="#" itemprop="url" title='' = article.article_title
+              = link_to article.article_title, article_path( article_title: article.article_title )
             .block6-meta
               ul.post-categories
                 li
-                  a href="#" title="" = Category.all.sample.page_title
+                  a href="" title="" = Category.all.sample.page_title
               ul.post-meta
                 li.date-post-meta
                   span /
@@ -84,15 +84,15 @@
         .block6-wrap.tn-block-wrap.tn-category-23.clearfix itemscope="" itemtype="http://schema.org/Article"
           meta content="admin" itemprop="author" /
           .thumb-wrap
-            a href="#" rel="bookmark" title=article.article_title
+            a href="" rel="bookmark" title=article.article_title
               img.attachment-small_thumb.wp-post-image alt="521d06bf31726584c21bbb75d38f9f2e" height="63" itemprop="image" src=article.article_images.first.image_url width="90" /
           .block6-content
             h3.block-title itemprop="name"
-              a href="#" itemprop="url" title='' = article.article_title
+              = link_to article.article_title, article_path( article_title: article.article_title )
             .block6-meta
               ul.post-categories
                 li
-                  a href="#" title="" = Category.all.sample.page_title
+                  a href="" title="" = Category.all.sample.page_title
               ul.post-meta
                 li.date-post-meta
                   span /
