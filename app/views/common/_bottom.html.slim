@@ -20,4 +20,4 @@
                 img.attachment-module_square_thumb.wp-post-image alt="f2979fea97898f088c7995676633c30c" height="165" itemprop="image" src=article.article_images.first.image_url width="220"
             .block-image-content
               h3.block-title itemprop="name"
-                a href="#" itemprop="url" title=("#{ article.article_title }") = article.article_title
+                = link_to "#{ article.article_title }", article_path( article_title: article.article_title )

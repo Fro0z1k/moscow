@@ -1,7 +1,11 @@
 class CategoryController < ApplicationController
   def show
-    @category = Category.where( title: params[:title] ).first
+    @category = Category.find_by( title: params[:title] )
     @header = 6.times.map { | article | Category.first.articles.sample }
+    @footer = 3.times.map { | article | Article.all.sample }
+    @news = 10.times.map { | article | Category.first.articles.sample }
+    @small_news = 6.times.map { | article | Category.last.articles.sample }
+
 
     @economy =                  Category.find_by( title: 'economy' )
     @urban_infrastructure =     Category.find_by( title: 'urban_infrastructure' )

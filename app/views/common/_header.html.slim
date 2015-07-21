@@ -97,6 +97,6 @@ header.clearfix
               li.block-ticker-wrap.tn-category-24 itemscope="" itemtype="http://schema.org/Article"
                 meta content="admin" itemprop="author"
                 h3.block-title itemprop="name"
-                  a href="#" itemprop="url" title="article.article_title"  =article.article_title
+                  = link_to article.article_title, article_path( article_title: article.article_title )
             end
             /! #module ticker

@@ -70,12 +70,12 @@ body.single.single-post.postid-12887.single-format-standard.tn-body-class
                   span.prev-article Предыдущая новость
                   a href="#" rel="prev"
                     .single-nav-title-wrap.single-nav-left
-                      span.single-nav-title = @prew_news.article_title
+                      span.single-nav-title = link_to "#{ @prew_news.article_title }", article_path( article_title: @prew_news.article_title )
                 .single-next
                   span.next-article Следующая новость
-                  = link_to "#{ @next_news.article_title }", article_path( article_title: @next_news.article_title )
+                  a href="#" rel="prev"
                     .single-nav-title-wrap.single-nav-right
-                      span.single-nav-title = @next_news.article_title
+                      span.single-nav-title = link_to "#{ @next_news.article_title }", article_path( article_title: @next_news.article_title )
               #comments.comments-area
                 #respond.comment-respond
                   h3#reply-title.comment-reply-title

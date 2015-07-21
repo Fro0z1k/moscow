@@ -3,8 +3,11 @@ class ArticleController < ApplicationController
 
     @prew_news = Article.all.sample
     @next_news = Article.all.sample
-
+    @footer = 3.times.map { | article | Article.all.sample }
+    @small_news = 6.times.map { | article | Category.last.articles.sample }
     @article = Article.find_by(article_title: params[:article_title])
+    @category = Category.all.sample
+
 
     @economy =                  Category.find_by( title: 'economy' )
     @urban_infrastructure =     Category.find_by( title: 'urban_infrastructure' )
