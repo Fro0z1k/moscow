@@ -8,7 +8,7 @@
               .block-carousel-wrap.tn-category-23 itemscope="" itemtype="http://schema.org/Article"
                 .thumb-wrap
                   .thumb-overlay
-                  a href="article.article_title"
+                  a href=""
                     img.attachment-module_5_thumb.wp-post-image alt="" draggable="false" height="165" itemprop="image" src="#{article.article_images.first.image_url}" width="220"
                   .shares-to-social-thumb-wrap.share-invisible
                     .shares-to-social-thumb-inner
@@ -25,7 +25,7 @@
                         span 10 views
                     / # meta thumb wrap
                     h3.block-title itemprop="name"
-                      a href="#" itemprop="url" title="#{ article.article_title }" ="#{article.article_title}"
+                      = link_to article.article_title, article_path( category_title: article.main_category_title, article_title: article.article_title )
                     .block1-meta-tag
                       ul.post-categories
                         li
