@@ -33,3 +33,4 @@ class MainController < ApplicationController
     @politics =                 Category.find_by( title: 'politics' )
   end
 end
+
