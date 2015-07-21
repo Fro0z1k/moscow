@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require api
+//= require plusone
+//= require widgets
+//= require 162488195-postmessagerelay
 //= require add-to-cart.min
 //= require cart-fragments.min
 //= require comment-reply.min

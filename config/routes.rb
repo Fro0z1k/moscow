@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'main#index'
   get 'category/:title', to: 'category#show', as: 'category'
-  get '/:category_title/:article_title', to: 'article#show', as: 'article'
+  get '/:article_title', to: 'article#show', as: 'article'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

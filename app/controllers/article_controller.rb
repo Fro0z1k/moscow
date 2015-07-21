@@ -1,6 +1,11 @@
 class ArticleController < ApplicationController
   def show
+
+    @prew_news = Article.all.sample
+    @next_news = Article.all.sample
+
     @article = Article.find_by(article_title: params[:article_title])
+
     @economy =                  Category.find_by( title: 'economy' )
     @urban_infrastructure =     Category.find_by( title: 'urban_infrastructure' )
     @architecture =             Category.find_by( title: 'architecture' )

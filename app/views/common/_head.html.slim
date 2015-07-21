@@ -9,7 +9,7 @@ link href="http://gmpg.org/xfn/11" rel="profile"
 / link href="http://moscow.today/feed/rss/" rel="alternate" title=("RSS .92") type="text/xml"
 / link href="http://moscow.today/feed/" rel="alternate" title=("RSS 2.0") type="application/rss+xml"
 / link href="http://moscow.today/xmlrpc.php" rel="pingback"
-link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"
+link href="/assets/style.css" media="screen" rel="stylesheet" type="text/css"
 javascript:
   /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
   if ( typeof WebFontConfig === "undefined" ) {
@@ -31,24 +31,24 @@ meta content="website" property="og:type"
 / link href="http://moscow.today/feed/" rel="alternate" title=("moscow.today &raquo; Лента") type="application/rss+xml"
 / link href="http://moscow.today/comments/feed/" rel="alternate" title=("moscow.today &raquo; Лента комментариев") type="application/rss+xml"
 / link href="http://moscow.today/sample-page/feed/" rel="alternate" title=("moscow.today &raquo; Лента комментариев к &laquo;Главная страница&raquo;") type="application/rss+xml"
-link#contact-form-7-css href="/stylesheets/styles.css" media="all" rel="stylesheet" type="text/css"
-link#woocommerce-layout-css href="/stylesheets/woocommerce-layout.css" media="all" rel="stylesheet" type="text/css"
-link#woocommerce-smallscreen-css href="/stylesheets/woocommerce-smallscreen.css" media=("only screen and (max-width: 768px)") rel="stylesheet" type="text/css"
-link#woocommerce-general-css href="/stylesheets/woocommerce.css" media="all" rel="stylesheet" type="text/css"
-link#tn-style-css href="/stylesheets/style.css" media="all" rel="stylesheet" type="text/css"
-link#tn-extend-css-css href="/stylesheets/extend-lib.css" media="all" rel="stylesheet" type="text/css"
-link#tn-style-css-css href="/stylesheets/tn-style.min.css" media="all" rel="stylesheet" type="text/css"
-link#tn-woocommerce-css href="/stylesheets/tn-woocommerce.min.css" media="all" rel="stylesheet" type="text/css"
-script src="/javascripts/jquery.js" type="text/javascript"
-script src="/javascripts/jquery-migrate.min.js" type="text/javascript"
+link#contact-form-7-css href="/assets/styles.css" media="all" rel="stylesheet" type="text/css"
+link#woocommerce-layout-css href="/assets/woocommerce-layout.css" media="all" rel="stylesheet" type="text/css"
+link#woocommerce-smallscreen-css href="/assets/woocommerce-smallscreen.css" media=("only screen and (max-width: 768px)") rel="stylesheet" type="text/css"
+link#woocommerce-general-css href="/assets/woocommerce.css" media="all" rel="stylesheet" type="text/css"
+link#tn-style-css href="/assets/style.css" media="all" rel="stylesheet" type="text/css"
+link#tn-extend-css-css href="/assets/extend-lib.css" media="all" rel="stylesheet" type="text/css"
+link#tn-style-css-css href="/assets/tn-style.min.css" media="all" rel="stylesheet" type="text/css"
+link#tn-woocommerce-css href="/assets/tn-woocommerce.min.css" media="all" rel="stylesheet" type="text/css"
+script src="/assets/jquery.js" type="text/javascript"
+script src="/assets/jquery-migrate.min.js" type="text/javascript"
 / link href="http://moscow.today/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"
 / link href="http://moscow.today/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"
 meta content=("WordPress 4.1.5") name="generator"
 meta content=("WooCommerce 2.3.8") name="generator"
 link href="#" rel="canonical"
 link href="#" rel="shortlink"
-script type="text/javascript"
-  var tn_ajax_url = 'http://moscow.today/wp-admin/admin-ajax.php';
+/ script type="text/javascript"
+/   var tn_ajax_url = '#admin_path';
 
 style media="all" type="text/css"
   /* menu top */
@@ -56,60 +56,48 @@ style media="all" type="text/css"
   /* footer */
   /* copyright */
   /* body font */
-  body { font-family:Helvetica, Arial, sans-serif;font-size:14px; }
+  | body { font-family:Helvetica, Arial, sans-serif;font-size:14px; }
 
   /* title font */
   | .block-title,.single-style1-title,.single-style2-title,.author-title,.search-submit,.single-nav-title-wrap,
   | .review-widget-post-title,.review-widget-score,.single-review-element,.single-review-summary h3,.block-big-slider-title,
   | .big-carousel-inner,.logo-404,.single-aside-social-wrap .share-title,.social-count-wrap .num-count,.twitter-widget-title h3,
   | .block-feature2-slider-title,#main-content .widget .module5-wrap .col-sm-4 .block4-wrap .block-title, #main-content .single-related-wrap .col-sm-4 .block4-wrap .block-title,
-  | .page-title-wrap,.title-logo, .woocommerce div.product .product_title, .woocommerce .page-title  {
-  |   font-family:Roboto;font-weight:400;text-transform:capitalize;font-size:19px;line-height:27px;
-    }
+  | .page-title-wrap,.title-logo, .woocommerce div.product .product_title, .woocommerce .page-title  { font-family:Roboto;font-weight:400;text-transform:capitalize;font-size:19px;line-height:27px; }
 
-  | /* small title font */
+  /* small title font */
   | .block6-wrap .block-title, .block11-wrap .block-title, .block8-wrap .block-title, .single-tags-source-wrap,
   | .widget_categories ul, .widget_pages ul, .single-social-wrap, .widget_nav_menu ul, .widget_archive ul,
   | .block9-wrap .block-title, .module-ticker-wrap .block-title, .big-slider-carousel-title, #menu-main .block-title,
   | #main-content .widget .col-sm-4 .block4-wrap .block-title, .page-numbers, .block11-wrap .review-score,
   | .block11-score-separation, .woocommerce ul.cart_list .product-title, .woocommerce ul.product_list_widget .product-title,
-  | .woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a, .cart_item .product-name a {
-  |   font-family:Roboto;font-weight:400;text-transform:capitalize;font-size:14px;line-height:19px;
-    }
+  | .woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a, .cart_item .product-name a { font-family:Roboto;font-weight:400;text-transform:capitalize;font-size:14px;line-height:19px; }
 
-  | /* meta tags font */
+  /* meta tags font */
   | .post-meta, .sub-cate-wrap, .breadcrumbs-bar-wrap, .author-widget-content, .post-categories,
-  | .rememberme, .register-links, .meta-thumb-wrap, .review-score {
-  |   font-family:Roboto;font-weight:400;text-transform:uppercase;font-size:10px;
-    }
+  | .rememberme, .register-links, .meta-thumb-wrap, .review-score { font-family:Roboto;font-weight:400;text-transform:uppercase;font-size:10px; }
 
   | /* menu font */
   | #menu-main > ul > li > a, .tn-sub-menu-wrap, .menu-nav-top, #main-mobile-menu,
-  | .module-ticker-wrap .block-title {
-  |   font-family:Roboto;font-weight:700;font-size:14px;
-    }
+  | .module-ticker-wrap .block-title { font-family:Roboto;font-weight:700;font-size:14px; }
 
   | /* header title font */
   | .widget-title h3, .cate-title, .search-page-title, .archive-page-title,
-  | .side-dock-title h3, .comment-title h3, .related.products h2 {
-  |   font-family:Roboto;font-weight:700;font-size:14px;
-    }
+  | .side-dock-title h3, .comment-title h3, .related.products h2 { font-family:Roboto;font-weight:700;font-size:14px; }
 
-  | /*header style */
+  /*header style */
 
-  | /* sidebar position */
+  /* sidebar position */
 
-  | /* color text */
+  /* color text */
   | .tn-mega-menu-col > .tn-sub-menu-wrap > ul > li > ul > li > a:hover, .tn-sub-menu li a:hover, .cat-item a:before, .widget_pages .page_item a:before, .widget_meta li:before, .widget_archive li a:before,
   | .widget_nav_menu .menu-main-nav-container > ul > li > a:before, .widget_rss ul li a, .about-widget-name span, .title-logo a::first-letter,
   | .block11-wrap:before, .logo-404 h1, .post-content-wrap a, .post-content-wrap a:hover, .post-content-wrap a:focus, .comment-form .logged-in-as a, .prev-article, .next-article,
   | #close-side-dock:hover, .single-review-score, .post-categories li:hover a, .post-categories li:focus a, #recentcomments a, #footer .post-categories a:hover,#footer .post-categories a:focus,
   | #main-mobile-menu .current-menu-item a, #main-mobile-menu li a:hover, .block11-score-separation, .block11-wrap .review-score, .single-review-as, .menu-nav-top .sub-menu li a:hover,
-  | .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce .page-wrap .star-rating span {
-  |   color: #EC4C51;
-  | }
+  | .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce .page-wrap .star-rating span { color: #EC4C51; }
 
-  | /* selector */
+  /* selector */
   | ::selection {
   |   background: #EC4C51;
   |   color: #fff;
@@ -120,31 +108,23 @@ style media="all" type="text/css"
   |   color: #fff;
   | }
 
-  | /* background */
+  /* background */
   | #menu-main > ul > li.current-menu-item > a, #menu-main > ul > li > a:hover, .tn-mega-menu-col > .tn-sub-menu-wrap > ul > li > a,
   | .ajax-search-icon:hover, .ajax-search-icon:focus, .menu-nav-top li a:hover, .block-big-slider-cate-tag li, .review-score, .drop-caps,
   | #comment-submit, .form-submit #submit, .score-bar, .top-score-bar, #toTop i, .no-thumb, .widget-title h3:before, .close-mobile-menu-wrap,
   | .tn-ajax-loadmore:hover, .tn-ajax-loadmore:focus, .page-numbers.current, .page-numbers:hover, .page-numbers:focus, .meta-thumb-element:hover,
   | .meta-thumb-element:focus, #mobile-button-nav-open:hover, #mobile-button-nav-open:focus, .widget_product_search input[type="submit"]:hover, .widget_product_search input[type="submit"]:focus,
   | .woocommerce span.onsale, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
-  | .related.products h2:before, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
-  |   background: #EC4C51;
-  | }
+  | .related.products h2:before, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover { background: #EC4C51; }
 
-  | .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current {
-  |   background: #EC4C51 !important;
-  | }
+  | .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current { background: #EC4C51 !important; }
 
-  | /* border */
+  /* border */
   | .post-content-wrap blockquote, pre, .cate-title, .search-page-title, .archive-page-title, .post-categories,
-  | .author-title, .big-carousel-inner, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .tn-share-to-email-popup {
-  |   border-color: #EC4C51;
-  | }
+  | .author-title, .big-carousel-inner, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .tn-share-to-email-popup { border-color: #EC4C51; }
 
   | .tn-mega-menu, .tn-navbar, .tn-mega-menu-col, .tn-dropdown-menu, #menu-main ul li .tn-dropdown-menu ul li ul.tn-sub-menu,
-  | #menu-main ul li div.tn-dropdown-menu ul li ul.tn-sub-menu, .ajax-form {
-  |   border-top-color: #EC4C51
-    }
+  | #menu-main ul li div.tn-dropdown-menu ul li ul.tn-sub-menu, .ajax-form { border-top-color: #EC4C51 }
 
   /* layout */
   /*right title line height fix */
@@ -208,6 +188,6 @@ link href="#" rel=("shortcut icon") type="image/x-icon"
 meta content=("Новости Москвы") name="description"
 / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
 /[if lt IE 9]
-  script type='text/javascript' src="/javascripts/css3-mediaqueries.js"
+  script type='text/javascript' src="/assets/css3-mediaqueries.js"
   script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"
   script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"

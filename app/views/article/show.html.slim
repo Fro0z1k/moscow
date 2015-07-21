@@ -13,11 +13,11 @@ body.single.single-post.postid-12887.single-format-standard.tn-body-class
                 .single-style1-meta-tag.tn-category-32
                   ul.post-categories
                     li
-                      a href="#" title="Дети"  Дети
+                      a href="#" title="" = Category.all.sample.page_title
                   ul.post-meta
                     li.date-post-meta
                       span
-                      time datetime="2015-05-21T17:46:57+00:00" itemprop="dateCreated"  21.05.2015
+                      time datetime="2015-05-21T17:46:57+00:00" itemprop="dateCreated"
                     li
                       span
                       a href="#" itemprop="author"  admin
@@ -26,13 +26,13 @@ body.single.single-post.postid-12887.single-format-standard.tn-body-class
                       a href="#"  No Comment
                     li
                       span
-                      | 22 views
+                      | =rand(15)
                   meta content="UserComments:0" itemprop="interactionCount"
                 .single-style1-title
-                  h1 itemprop="name"  Арендаторы уничтожили облик городской усадьбы в Старопименовском переулке
+                  h1 itemprop="name"  = @article.article_title
                 .single-top-social-wrap.single-social-wrap
                   span.single-social-title share on:
-                  a.share-to-social.color-facebook href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmoscow.today%2Farendatory-unichtozhili-oblik-gorodskoj-usadby-v-staropimenovskom-pereulke%2F" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
+                  a.share-to-social.color-facebook href="http://www.facebook.com/sharer.php?u=http#" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
                     i.fa.fa-facebook
                     span.share-title Facebook
                   a.share-to-social.color-twitter href="https://twitter.com/intent/tweet?text=%D0%90%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%D1%82%D0%BE%D1%80%D1%8B+%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B8%D0%BB%D0%B8+%D0%BE%D0%B1%D0%BB%D0%B8%D0%BA+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9+%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D1%8B+%D0%B2+%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%BF%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC+%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BA%D0%B5&amp;url=http%3A%2F%2Fmoscow.today%2Farendatory-unichtozhili-oblik-gorodskoj-usadby-v-staropimenovskom-pereulke%2F&amp;via=moscow.today" onclick="window.open(this.href, 'mywin',\n'left=50,top=50,width=600,height=350,toolbar=0'); return false;"
@@ -45,11 +45,8 @@ body.single.single-post.postid-12887.single-format-standard.tn-body-class
                   .thumb-wrap
                   .post-content-wrap
                     p
-                      img src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg"
-                    p Департамент культурного наследия
-                    p Мосгорнаследие расследует уничтожение исторического облика объекта культурного наследия — старинной городской усадьбы в Старопименовском переулке, дом 11, строение 1. Как сообщается на сайте Департамента культурного наследия, данный факт был выявлен после выездной проверки одного из зданий, которому ранее был присвоен статус объекта культурного наследия регионального значения.
-                    p В ходе проверки было установлено, что пользователи части здания не соблюдали требования законодательства: на поверхности стен видны трещины, сколы декоративных элементов и краски, система желобов и водостоков находится в неудовлетворительном состоянии. Кроме того, внутри здания были сделаны несанкционированные перепланировки, а в одной из стен со стороны двора без разрешения сделали дополнительный вход.
-                    p Все элементы, подвергшиеся изменению, входили в предмет охраны памятника. Специалисты Мосгорнаследия проводят административное расследование всех фактов нарушения законодательства пользователями здания. Если факты повреждения элементов дома будут доказаны, виновным грозит штраф в сумме до 20 миллионов рублей. Однако градозащитники жалуются, что на практике виновные часто отделываются намного меньшими штрафами, даже если речь идет о сносе здания.
+                      img src="#{ @article.article_images.first.image_url }"
+                    p = Nokogiri::HTML( @article.article_body ).text
                   /! #post content
               .tn-social-like-post
                 ul
@@ -63,22 +60,22 @@ body.single.single-post.postid-12887.single-format-standard.tn-body-class
                     #___plusone_0 style=("text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;")
                       iframe#I0_1437472218300 data-gapiattached="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" name="I0_1437472218300" scrolling="no" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=http%3A%2F%2Fmoscow.today&amp;url=http%3A%2F%2Fmoscow.today%2Farendatory-unichtozhili-oblik-gorodskoj-usadby-v-staropimenovskom-pereulke%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.ru.zCIgfqXqA3s.O%2Fm%3D__features__%2Fam%3DQQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPcAS6d2R9PqD7I1uIkAuxM5fL0JA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1437472218300&amp;parent=http%3A%2F%2Fmoscow.today&amp;pfname=&amp;rpctoken=36889542" style=("position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;") tabindex="0" title="+1" vspace="0" width="100%"
                     javascript:
-                      | (function() {
-                          | var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
-                          | po.src = "https://apis.google.com/js/plusone.js";
-                          | var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
-                      | })();
+                      (function() {
+                        var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+                        po.src = "https://apis.google.com/js/plusone.js";
+                        var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+                      })();
               .single-nav.clearfix role="navigation"
                 .single-previous
                   span.prev-article Предыдущая новость
-                  a href="http://moscow.today/stolichnye-vlasti-nadeyutsya-na-elektromobilnyj-bum/" rel="prev"
+                  a href="#" rel="prev"
                     .single-nav-title-wrap.single-nav-left
-                      span.single-nav-title Столичные власти надеются на «электромобильный бум»
+                      span.single-nav-title = @prew_news.article_title
                 .single-next
                   span.next-article Следующая новость
-                  a href="http://moscow.today/mopedy-v-podmoskove-budut-otpravlyat-na-shtrafstoyanki-za-narusheniya-pdd/" rel="next"
+                  = link_to "#{ @next_news.article_title }", article_path( article_title: @next_news.article_title )
                     .single-nav-title-wrap.single-nav-right
-                      span.single-nav-title Мопеды в Подмосковье будут отправлять на штрафстоянки за нарушения ПДД
+                      span.single-nav-title = @next_news.article_title
               #comments.comments-area
                 #respond.comment-respond
                   h3#reply-title.comment-reply-title
