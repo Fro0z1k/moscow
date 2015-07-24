@@ -1,7 +1,7 @@
 module Scrapers::Mk
 	def self.get_article_links
 		links = []
-		site_url = "http://www.mk.ru/news/"
+		site_url = "http://www.mk.ru/moscow/"
 		www = ScrapeUtils.new_mechanize
 		mainpage = www.get site_url
 		mainpage.search("ul[@class='news_list news_list_big']/li").each do |li|
@@ -9,7 +9,7 @@ module Scrapers::Mk
 		end
 		links
 	end
-	
+
 	def self.get_article(link)
 		www = ScrapeUtils.new_mechanize
 		article_page = www.get link

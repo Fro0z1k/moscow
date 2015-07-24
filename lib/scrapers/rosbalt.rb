@@ -1,7 +1,7 @@
 module Scrapers::Rosbalt
 	def self.get_article_links
 		links = []
-		site_url = "http://www.rosbalt.ru/main/allnews/"
+		site_url = "http://www.rosbalt.ru/main/allnews"
 		www = ScrapeUtils.new_mechanize
 		newslist = www.get site_url
 		newslist.search("div[@id='content']//td/p").each do |par|
@@ -10,7 +10,7 @@ module Scrapers::Rosbalt
 		end
 		links
 	end
-	
+
 	def self.get_article(link)
 		www = ScrapeUtils.new_mechanize
 		article_page = www.get link

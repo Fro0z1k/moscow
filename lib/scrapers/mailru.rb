@@ -1,7 +1,7 @@
 module Scrapers::Mailru
 	def self.get_article_links
 		links = []
-		site_url = "https://news.mail.ru/"
+		site_url = "https://news.mail.ru/inregions/moscow/90/"
 		www = ScrapeUtils.new_mechanize
 		newslist = www.get site_url
 		newslist.search("div[@class='c-notified js-topnews']/section/div/div").each do |par|
@@ -9,7 +9,7 @@ module Scrapers::Mailru
 		end
 		links
 	end
-	
+
 	def self.get_article(link)
 		www = ScrapeUtils.new_mechanize
 		article_page = www.get link

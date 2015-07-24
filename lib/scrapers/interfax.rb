@@ -1,7 +1,7 @@
 module Scrapers::Interfax
 	def self.get_article_links
 		links = []
-		site_url = "http://www.interfax.ru/"
+		site_url = "http://www.interfax.ru"
 		www = ScrapeUtils.new_mechanize
 		mainpage = www.get site_url
 		mainpage.encoding = 'windows-1251'

@@ -9,7 +9,8 @@ module ContentEngine
 
 
     def get_all_articles
-    	scraper_names = %w|kp moskva_bezformata mk interfax tass vm rosbalt newsmsk rg|
+    	scraper_names = %w|regnews kp moskva_bezformata mk interfax tass vm rosbalt|
+      # scraper_names = %w|regnews kp|
     	scraper_names.each do | n | get_articles n end
     end
 
@@ -19,11 +20,11 @@ module ContentEngine
 			article_source.save! if article_source.new_record?
 			article_links = scraper.get_article_links
 			article_links.each do | link |
-				next if article_source.articles.where( source_url: link ).first
+        next if article_source.articles.where( source_url: link ).first
 				article_data = scraper.get_article( link )
 				article = article_source.articles.build( article_title: article_data[:title], article_body: article_data[:text], source_url: link )
 				( article_data[:images] || [] ).each do | image_link |
-					image = article.article_images.build( image_url: image_link )
+				  image = article.article_images.build( image_url: image_link )
 				end
 				article.save if article.article_images.any?
 			end
