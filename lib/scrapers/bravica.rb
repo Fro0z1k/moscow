@@ -15,7 +15,7 @@ module Scrapers::Bravica
 	end
 
   def self.get_article( link )
-    sleep 20
+    sleep 60
     www = ScrapeUtils.new_mechanize
 		article_page = www.get( link )
     images = []
