@@ -4,4 +4,4 @@ require 'clockwork'
 
 include Clockwork
 
-every( 1.hour, 'Start gem content_engine' ) { ContentEngine.work }
+every( 1.hour, 'Start Content_engine' ) { ContentEngine.start }
